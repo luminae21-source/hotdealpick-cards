@@ -1,0 +1,52 @@
+{
+  "mall": "coupang",
+  "title": "오늘의 쿠팡 골드박스 TOP5",
+  "checked": "2026-11-01 07:01",
+  "items": [
+    {
+      "name": "액츠 퍼펙트 실내건조 액상세제 3.2L",
+      "price": "10,900원",
+      "cond": "와우가",
+      "unit": "1L당 3,406원",
+      "img": "https://img5c.coupangcdn.com/image/retail/images/57158726844058-5f532d39-0cbe-4379-ac54-9f6c2593b978.jpg",
+      "url": "https://link.coupang.com/a/ijc5LDcDDM",
+      "checked": "2026-11-01 07:01"
+    },
+    {
+      "name": "자연퐁 스팀워시 식기세척기용 세제 베이킹소다 55입",
+      "price": "23,900원",
+      "cond": "와우가",
+      "unit": "1개당 435원",
+      "img": "https://image11.coupangcdn.com/image/retail/images/57717028854304-5c7a6b2b-6261-48f8-8b56-8790056c08f4.jpg",
+      "url": "https://link.coupang.com/a/ijc5LGleWi",
+      "checked": "2026-11-01 07:01"
+    },
+    {
+      "name": "스너글 고농축 섬유유연제 블루 스파클 플러스 본품",
+      "price": "11,000원",
+      "cond": "와우가",
+      "unit": "",
+      "img": "https://image13.coupangcdn.com/image/retail/images/568111332979180-8bd5e67e-58a2-4f04-8de2-b06ef65a2c20.jpg",
+      "url": "https://link.coupang.com/a/ijc5LJjz6i",
+      "checked": "2026-11-01 07:01"
+    },
+    {
+      "name": "퍼실 딥클린 초미세세탁 라벤더젤 맥스 드럼용 액체세제 리필",
+      "price": "19,900원",
+      "cond": "와우가",
+      "unit": "",
+      "img": "https://image5.coupangcdn.com/image/retail/images/183527831882073-ded2962c-cfa7-407a-ad28-183e4ac05fa2.jpg",
+      "url": "https://link.coupang.com/a/ijc5LLDTz2",
+      "checked": "2026-11-01 07:01"
+    },
+    {
+      "name": "조인 동물복지 유정란",
+      "price": "9,590원",
+      "cond": "와우가",
+      "unit": "",
+      "img": "https://image10.coupangcdn.com/image/retail/images/41851124136027-08f0366d-d18d-466b-b182-207cd3b8a66a.jpg",
+      "url": "https://link.coupang.com/a/ijc5LOQbYq",
+      "checked": "2026-11-01 07:01"
+    }
+  ]
+}

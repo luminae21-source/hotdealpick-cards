@@ -1,0 +1,34 @@
+{
+  "mall": "coupang",
+  "title": "새벽 장바구니 · 생필품 3",
+  "checked": "2026-11-01 01:07",
+  "items": [
+    {
+      "name": "샤워메이트 말랑이 버블 핸드워시 리필 450ml",
+      "price": "3,600원",
+      "cond": "",
+      "unit": "100ml당 800원",
+      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/retail/images/2025/09/29/10/9/f05f041c-245f-4e79-b88d-95fdb5c28647.png",
+      "url": "https://link.coupang.com/a/ifvGYwK4Bw",
+      "checked": "2026-10-30 00:15"
+    },
+    {
+      "name": "탐사 분리수거 쓰레기봉투 배접 유백 60L×200",
+      "price": "12,240원",
+      "cond": "와우가",
+      "unit": "1장당 61원",
+      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/retail/images/973023449693-cdb0f68d-fe17-4a47-ace5-6f87e1c7ab6b.jpg",
+      "url": "https://link.coupang.com/a/ifvGXHBKKG",
+      "checked": "2026-10-30 00:15"
+    },
+    {
+      "name": "리베로 밴드형 기저귀 6단계 252매",
+      "price": "58,200원",
+      "cond": "쿠폰가",
+      "unit": "1매당 231원",
+      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/retail/images/2025/08/04/11/6/aa8f135e-afbd-43da-bdfd-be2e8803a1d0.jpg",
+      "url": "https://link.coupang.com/a/ifBmR3kDjE",
+      "checked": "2026-10-30 00:15"
+    }
+  ]
+}
