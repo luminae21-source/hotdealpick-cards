@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>핫딜픽 · 상품 카드</title>
+    <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/card.css">
+  </head>
+  <body class="card-page">
+    <nav class="preview-nav" aria-label="미리보기 메뉴">
+      <a class="back-link" href="./">← 카드 목록</a>
+      <span>핫딜픽 카드 미리보기 · 1080 × 1350</span>
+    </nav>
+    <main>
+      <section id="feedback" class="feedback" aria-live="polite">
+        <span class="mini-logo" aria-hidden="true">딜</span>
+        <h1 id="feedback-title">카드를 준비하고 있어요</h1>
+        <p id="feedback-message">상품 정보와 이미지를 확인하고 있습니다.</p>
+        <ul id="feedback-details"></ul>
+        <a id="feedback-back" class="text-link" href="./" hidden>카드 목록으로 돌아가기 →</a>
+      </section>
+      <div id="card-stage" class="card-stage" hidden>
+        <article id="card" class="deal-card" aria-label="핫딜픽 상품 카드">
+          <p id="disclosure" class="disclosure"></p>
+          <header class="card-header">
+            <div class="brand-line">
+              <div class="brand"><span class="brand-mark">딜</span><span>핫딜픽</span></div>
+              <span id="mall-badge" class="mall-badge"></span>
+            </div>
+            <div class="header-copy">
+              <p class="header-tagline"><span class="tagline-spark" aria-hidden="true">✦</span> 숫자로 고르는 핫딜</p>
+              <h1 id="card-title"></h1>
+              <div class="card-meta"><span id="checked-summary"></span><span id="item-count"></span></div>
+            </div>
+            <div class="card-art" aria-hidden="true">
+              <span class="art-sun"></span><span class="art-star art-star-one">✦</span><span class="art-star art-star-two">✧</span><span class="art-dot"></span>
+              <img class="mascots hero-mascots" data-testid="hero-art" src="assets/mascots-anime-v2.png" width="350" height="250" alt="" fetchpriority="high" decoding="async">
+            </div>
+          </header>
+          <ol id="products" class="products"></ol>
+          <footer class="card-footer">
+            <div class="footer-copy">
+              <p id="posting-note" class="posting-note" hidden></p>
+              <p class="footer-final">hotdealpick.kr · 결제 전 최종가 확인</p>
+            </div>
+            <span class="footer-love" aria-hidden="true">PICK YOUR HAPPY<span>♥</span></span>
+          </footer>
+        </article>
+      </div>
+      <aside id="preview-notices" class="preview-notices" hidden aria-label="데이터 확인 안내"></aside>
+    </main>
+    <noscript><p class="noscript">카드를 표시하려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+    <script type="module" src="assets/card.js"></script>
+  </body>
+</html>

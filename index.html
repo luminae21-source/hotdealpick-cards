@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="핫딜픽의 쿠팡·토스·네이버 상품 카드. 확인한 가격과 단위가를 한눈에 살펴보세요.">
+    <title>핫딜픽 · 오늘의 카드</title>
+    <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/card.css">
+  </head>
+  <body class="gallery-page">
+    <div class="gallery-shell">
+      <header class="gallery-top"><a class="brand" href="./" aria-label="핫딜픽 홈"><span class="brand-mark">딜</span><span>핫딜픽</span></a><span class="gallery-top-caption">오늘의 장바구니를 가볍게</span></header>
+      <main>
+        <section class="gallery-hero">
+          <div class="hero-copy"><p class="eyebrow">HOTDEALPICK COLLECTION</p><h1>좋은 가격을,<br><span>한눈에 쏙.</span></h1><p class="hero-description">확인한 가격과 단위가를 담은<br>핫딜픽의 오늘의 카드.</p><div class="hero-badges"><span>🚀 쿠팡</span><span>💙 토스</span><span>네이버</span></div></div>
+          <div class="hero-art"><span class="hero-art-caption">숫자로 고르는 핫딜 ✦</span><img src="assets/mascots-anime-v2.png" width="420" height="320" alt="빨간 장바구니와 함께 웃는 골든 강아지와 삼색 고양이" fetchpriority="high"></div>
+        </section>
+        <section class="collection" aria-labelledby="collection-title">
+          <div class="collection-heading"><div><p class="eyebrow">TODAY'S PICKS</p><h2 id="collection-title">모아 보는 핫딜픽</h2></div><span id="gallery-count" class="gallery-count"></span></div>
+          <div id="gallery-feedback" class="gallery-empty" aria-live="polite"><h3>카드 목록을 불러오고 있어요</h3><p>잠시만 기다려 주세요.</p></div>
+          <div id="gallery-cards" class="gallery-cards"></div>
+        </section>
+      </main>
+      <footer class="gallery-footer"><strong>hotdealpick.kr</strong><span>가격과 재고는 바뀔 수 있어요. 결제 전 최종가를 확인해 주세요.</span></footer>
+    </div>
+    <noscript><p class="noscript">카드 목록을 보려면 JavaScript를 켜 주세요.</p></noscript>
+    <script type="module" src="assets/gallery.js"></script>
+  </body>
+</html>

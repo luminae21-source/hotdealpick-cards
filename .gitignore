@@ -1,0 +1,11 @@
+node_modules/
+dist/
+rendered/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+.render-tmp-*/
+.render-stage-*/
+.build-stage-*/
+.pipeline-test-*/
