@@ -7,7 +7,8 @@
 @font-face { font-family: HotdealSans; src: url('fonts/PretendardVariable.woff2') format('woff2'); font-weight: 100 900; }
 * { box-sizing: border-box; margin: 0; }
 body { background: #fff; font-family: HotdealSans, sans-serif; }
-#card { position: relative; width: 1122px; height: 1402px; background-size: 1122px 1402px; overflow: hidden; }
+#frame { width: 1080px; height: 1350px; overflow: hidden; background: #fff; }
+#card { position: relative; width: 1122px; height: 1402px; background-size: 1122px 1402px; overflow: hidden; transform: scale(calc(1080 / 1122)); transform-origin: 0 0; }
 .sub { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; font-size: 25px; font-weight: 700; color: #333; letter-spacing: -.4px; }
 .slot-photo { position: absolute; left: 132px; width: 250px; overflow: hidden; }
 [data-mall='toss'] .slot-photo { width: 208px; }
@@ -29,7 +30,7 @@ body { background: #fff; font-family: HotdealSans, sans-serif; }
 </style>
 </head>
 <body>
-<div id="card"></div>
+<div id="frame"><div id="card"></div></div>
 <script type="module">
 import { validateCard } from './validation.mjs';
 const st = window.__FILL__ = { status: 'loading' };
