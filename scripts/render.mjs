@@ -79,6 +79,20 @@ export async function renderCards({ root = ROOT, data } = {}) {
         const runtimeErrors = [];
         page.on('pageerror', error => runtimeErrors.push(error.message));
         try {
+          // 11/1 진우: GPT 시안 틀(assets/tpl)에 빈칸만 채운 카드 — 틀 칸 수 = 상품 수일 때만, 아니면 기존 카드(card.html)
+          const data = card.result.data;
+          const rows = await readFile(path.join(root, 'assets', 'tpl', `${data.mall}.json`), 'utf8').then(text => JSON.parse(text).rows.length).catch(() => 0);
+          const fill = rows > 0 && rows === data.items.length;
+          entry.renderer = fill ? 'fill' : 'card';
+          if (fill) {
+            await page.goto(`${app.url}/assets/fill.html?data=${encodeURIComponent(card.file)}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+            await page.waitForFunction(() => window.__FILL__ && window.__FILL__.status !== 'loading', null, { timeout: 45000 });
+            const state = await page.evaluate(() => window.__FILL__);
+            if (state.status !== 'ready') throw new Error(`Fill card: ${state.error}`);
+            const fontLoaded = await page.evaluate(() => document.fonts.ready.then(() => document.fonts.check('700 30px HotdealSans', '핫딜픽')));
+            entry.layout = { errors: fontLoaded ? [] : ['Bundled Korean font did not load.'], width: 1080, height: 1350, fontLoaded };
+            if (!fontLoaded || runtimeErrors.length) throw new Error([...entry.layout.errors, ...runtimeErrors].join('\n'));
+          } else {
           await page.goto(`${app.url}/card.html?data=${encodeURIComponent(card.file)}&export=1`, { waitUntil: 'domcontentloaded', timeout: 30000 });
           await page.waitForFunction(() => ['ready', 'invalid', 'error'].includes(window.__CARD_STATE__?.status), null, { timeout: 45000 });
           const state = await page.evaluate(() => window.__CARD_STATE__);
@@ -89,9 +103,10 @@ export async function renderCards({ root = ROOT, data } = {}) {
           const layout = await inspectLayout(page);
           entry.layout = layout;
           if (layout.errors.length || runtimeErrors.length) throw new Error([...layout.errors, ...runtimeErrors].join('\n'));
+          }
           const pngName = `${path.basename(card.name, '.json')}.png`;
           const destination = path.join(stage, pngName);
-          await page.locator('#card').screenshot({ path: destination, type: 'png', animations: 'disabled', scale: 'css', timeout: 15000 });
+          await page.locator(fill ? '#frame' : '#card').screenshot({ path: destination, type: 'png', animations: 'disabled', scale: 'css', timeout: 15000 });
           const buffer = await readFile(destination);
           if (buffer.readUInt32BE(16) !== 1080 || buffer.readUInt32BE(20) !== 1350) throw new Error('Saved PNG has incorrect pixel dimensions.');
           entry.png = `rendered/${pngName}`;
