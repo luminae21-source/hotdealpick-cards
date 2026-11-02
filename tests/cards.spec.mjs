@@ -51,6 +51,7 @@ for (const [mall, count] of [['coupang', 5], ['toss', 5], ['naver', 5]]) {
     expect(noticeBox.y - bounds.y).toBeLessThan(40);
     const hero = page.getByTestId('hero-art');
     await expect(hero).toBeVisible();
+    await expect(hero).toHaveAttribute('src', `assets/mascots/${mall}.png`);
     expect((await hero.boundingBox()).width).toBeGreaterThan(250);
     expect(await hero.evaluate(image => image.tagName === 'IMG' && /\.png(?:$|[?#])/.test(image.getAttribute('src')) && image.complete && image.naturalWidth > 0)).toBe(true);
     await expect(card).toContainText('hotdealpick.kr');

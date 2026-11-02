@@ -25,6 +25,8 @@ test('production export and Pages build create three exact PNGs with matching li
     expect(report.cards).toHaveLength(3);
     for (const entry of report.cards) {
       expect(entry.status).toBe('ready');
+      expect(entry.renderer).toBe('fill');
+      expect(entry.template).toMatch(/^(coupang-5|toss-4|naver-3)$/);
       expect(entry.layout.errors).toEqual([]);
       expect(entry.layout.fontLoaded).toBe(true);
       const png = await readFile(path.join(root, entry.png));

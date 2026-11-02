@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/luminae21-source/hotdealpick-cards/blob/main/schemas/card.schema.json",
+  "title": "Hotdealpick card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mall",
+    "title",
+    "checked",
+    "items"
+  ],
+  "properties": {
+    "mall": {
+      "enum": [
+        "coupang",
+        "toss",
+        "naver"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "checked": {
+      "type": "string",
+      "description": "실제 게시 기준 한국 시간 YYYY-MM-DD HH:mm. 빈 초안만 빈 문자열 허용."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "cond": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "img": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "checked": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "description": "편집기 구조 도움용. 몰 링크·가격·문구·시각 검증은 npm run validate로 수행합니다. JSON 자체에 $schema 필드를 추가하지 않습니다."
+}

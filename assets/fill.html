@@ -1,77 +1,14 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>핫딜픽 · 템플릿 채우기</title>
-<style>
-@font-face { font-family: HotdealSans; src: url('fonts/PretendardVariable.woff2') format('woff2'); font-weight: 100 900; }
-* { box-sizing: border-box; margin: 0; }
-body { background: #fff; font-family: HotdealSans, sans-serif; }
-#frame { width: 1080px; height: 1350px; overflow: hidden; background: #fff; }
-#card { position: relative; width: 1122px; height: 1402px; background-size: 1122px 1402px; overflow: hidden; transform: scale(calc(1080 / 1122)); transform-origin: 0 0; }
-.sub { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; font-size: 25px; font-weight: 700; color: #333; letter-spacing: -.4px; }
-.slot-photo { position: absolute; left: 132px; width: 250px; overflow: hidden; }
-[data-mall='toss'] .slot-photo { width: 208px; }
-[data-mall='coupang'] .slot-photo { width: 220px; }
-.slot-photo img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.slot-info { position: absolute; left: 408px; width: 340px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; }
-.name { font-size: 35px; font-weight: 700; line-height: 1.36; letter-spacing: 0; color: #1B2238; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; word-break: keep-all; overflow-wrap: anywhere; }
-.chip { height: 46px; padding: 0 22px; border-radius: 23px; display: inline-flex; align-items: center; font-size: 26px; font-weight: 700; }
-.has-chip .name { line-height: 1.12; }
-[data-mall='toss'] .slot-info { left: 357px; width: 440px; }
-[data-mall='coupang'] .slot-info { left: 366px; width: 430px; }
-.when { font-size: 20px; font-weight: 600; color: #666; }
-.slot-offer { position: absolute; right: 56px; width: 340px; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 8px; }
-.price { font-size: 53px; font-weight: 800; letter-spacing: -3.5px; line-height: 1.05; color: #F01A1A; white-space: nowrap; margin-right: 14px; }
-.unit { min-width: 256px; height: 58px; padding: 0 26px; border-radius: 29px; background: #FCF1D1; display: inline-flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600; color: #1B2238; letter-spacing: -.3px; white-space: nowrap; }
-[data-mall='naver'] .chip { background: #DDF5E3; color: #1F8A4C; }
-[data-mall='toss'] .chip { background: #E2EEFF; color: #1A5FD6; }
-[data-mall='coupang'] .chip { background: #FFE6E3; color: #D9261E; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>핫딜픽 · 템플릿 채우기</title>
+  <link rel="stylesheet" href="fill.css">
 </head>
 <body>
-<div id="frame"><div id="card"></div></div>
-<script type="module">
-import { validateCard } from './validation.mjs';
-const st = window.__FILL__ = { status: 'loading' };
-const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
-const short = (v) => { const m = /^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}:\d{2})/.exec(v); return m ? `${+m[2]}/${+m[3]} ${m[4]}` : v; };
-const load = (img) => new Promise((ok) => { if (img.complete && img.naturalWidth) return ok(); img.onload = img.onerror = ok; setTimeout(ok, 10000); });
-try {
-  const file = new URLSearchParams(location.search).get('data');
-  if (!/^data\/[A-Za-z0-9_-]+\.json$/.test(file)) throw new Error('data 경로');
-  const r = validateCard(await (await fetch('../' + file, { cache: 'no-store' })).json());
-  if (!r.ok) throw new Error(r.errors.map(e => e.message).join(' / '));
-  const d = r.data, tpl = await (await fetch(`tpl/${d.mall}.json`)).json();
-  // The template has exactly five blank rows; fewer items would leave empty rows.
-  if (d.items.length !== tpl.rows.length) throw new Error(`이 템플릿은 상품 ${tpl.rows.length}개가 필요해요 (지금 ${d.items.length}개)`);
-  const card = document.getElementById('card');
-  card.dataset.mall = d.mall;
-  card.style.backgroundImage = `url(tpl/${d.mall}.png)`;
-  const sub = el('div', 'sub', `${short(d.checked)} ${d.mall === 'toss' ? '게시 시점 가격' : '확인 가격'} · ${d.items.length}개의 픽`);
-  sub.style.left = `${tpl.sub.cx}px`; sub.style.top = `${tpl.sub.cy}px`;
-  card.append(sub);
-  const waits = [];
-  d.items.forEach((it, i) => {
-    const { top, bottom } = tpl.rows[i], h = bottom - top;
-    const place = (n, pad) => { n.style.top = `${top + pad}px`; n.style.height = `${h - pad * 2}px`; card.append(n); };
-    const photo = el('div', 'slot-photo');
-    if (it.img) { const img = el('img'); img.alt = ''; img.referrerPolicy = 'no-referrer'; img.src = /^https:/.test(it.img) ? it.img : '/' + it.img; photo.append(img); waits.push(load(img)); }
-    place(photo, 5);
-    const info = el('div', 'slot-info');
-    info.append(el('p', 'name', it.name));
-    if (it.cond) { info.classList.add('has-chip'); info.append(el('span', 'chip', it.cond)); }
-    if (it.checked !== d.checked) info.append(el('p', 'when', `${short(it.checked)} 확인`));
-    place(info, 6);
-    const offer = el('div', 'slot-offer');
-    offer.append(el('strong', 'price', it.price));
-    if (it.unit) offer.append(el('span', 'unit', it.unit));
-    place(offer, 6);
-  });
-  await document.fonts.load('600 30px HotdealSans', '핫딜픽'); await document.fonts.ready;
-  await Promise.all(waits);
-  st.status = 'ready';
-} catch (e) { st.status = 'error'; st.error = e.message; }
-</script>
+  <p id="feedback" role="alert" hidden></p>
+  <div id="frame" hidden><main id="card" aria-label="핫딜픽 상품 카드"></main></div>
+  <script type="module" src="fill.js"></script>
 </body>
 </html>

@@ -4,14 +4,21 @@
   "private": true,
   "type": "module",
   "description": "핫딜픽 쿠팡·토스·네이버 JSON 카드 렌더러",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "validate": "node scripts/validate.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "render": "node scripts/render.mjs",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "new": "node scripts/new-card.mjs",
+    "social": "node scripts/social-pack.mjs",
+    "pack": "npm run validate && npm run render && npm run social"
   },
-  "devDependencies": { "@playwright/test": "1.64.1" }
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
 }

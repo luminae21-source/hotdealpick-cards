@@ -165,7 +165,7 @@ async function waitForMascots() {
       image.onload = image.onerror = finish;
     });
   }
-  if (!image.naturalWidth) throw new Error('캐릭터 일러스트를 불러오지 못했습니다. assets/mascots-anime-v2.png 파일을 확인해 주세요.');
+  if (!image.naturalWidth) throw new Error('캐릭터 일러스트를 불러오지 못했습니다. assets/mascots/ 파일을 확인해 주세요.');
   if (image.decode) await image.decode();
   state.heroReady = true;
 }
@@ -207,12 +207,13 @@ async function init() {
     const data = result.data;
     const mall = MALLS[data.mall];
     card.dataset.mall = data.mall;
+    document.querySelector('.hero-mascots').src = `assets/mascots/${data.mall}.png`;
     $('disclosure').textContent = mall.disclosure;
     $('disclosure').dataset.testid = 'disclosure';
-    $('mall-badge').textContent = { coupang: '🚀 쿠팡', toss: '💙 토스', naver: '네이버' }[data.mall];
+    $('mall-badge').textContent = { coupang: '쿠팡', toss: '토스', naver: '네이버' }[data.mall];
     $('card-title').textContent = data.title;
     const titleLength = [...data.title].length;
-    $('card-title').className = titleLength > 28 ? 'title-long' : titleLength > 23 ? 'title-medium' : '';
+    $('card-title').className = titleLength > 28 ? 'title-long' : titleLength > 20 ? 'title-medium' : titleLength > 14 ? 'title-compact' : '';
     $('checked-summary').textContent = `${shortTime(data.checked)} 확인 가격`;
     $('item-count').textContent = `${data.items.length}개의 픽`;
     $('products').style.setProperty('--item-count', data.items.length);

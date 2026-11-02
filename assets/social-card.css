@@ -1,0 +1,77 @@
+/* Social template v6. One 1080×1350 canvas is shared by Threads/Instagram.
+   Artwork is independent PNG; all product copy remains editable native text. */
+.deal-card {
+  --accent: #F43132;
+  --headline: #B52B23;
+  --notice: #FFE0CB;
+  padding: 24px 32px 28px;
+  grid-template-rows: 80px 254px minmax(0, 1fr) 90px;
+  row-gap: 16px;
+}
+.deal-card[data-mall='coupang'] { background: linear-gradient(135deg,#FFF7EC,#FFE4D2); }
+.deal-card[data-mall='toss'] {
+  --accent: #066BFF; --headline: #06429B; --notice: #CBEAFF;
+  background: linear-gradient(135deg,#EEFaff,#CFECFF);
+}
+.deal-card[data-mall='naver'] {
+  --accent: #008C53; --headline: #005D3D; --notice: #DDEDBB;
+  background: linear-gradient(135deg,#F5FBEA,#E1F0C4);
+}
+.deal-card::before { border: none; background: #FFFFFF65; left: -160px; top: 560px; width: 400px; height: 400px; }
+.deal-card .disclosure {
+  display: flex; align-items: center; padding: 12px 20px;
+  border: none; border-radius: 28px; background: var(--notice);
+  font-size: 22px; font-weight: 700; line-height: 1.35;
+}
+.deal-card .brand-line { height: 58px; }
+.deal-card .brand-mark { width: 58px; height: 58px; font-size: 39px; }
+.deal-card .brand { font-size: 39px; }
+.deal-card .mall-badge { background: #FFFFFFE8; color: var(--headline); border: none; box-shadow: none; }
+.deal-card .header-copy { position: absolute; top: 82px; left: 0; width: 638px; height: 166px; display: flex; flex-direction: column; justify-content: space-between; }
+.deal-card .header-tagline { display: none; }
+.deal-card .card-header h1 { position: relative; color: var(--headline); font-size: 74px; line-height: 1.08; letter-spacing: -3px; font-weight: 900; padding-bottom: 14px; }
+.deal-card .card-header h1::after { content: ''; position: absolute; bottom: 7px; left: 0; width: 96%; height: 7px; background: #FFDA38; border-radius: 100%; transform: rotate(-1deg); }
+.deal-card .card-header h1.title-compact { font-size: 52px; letter-spacing: -1.6px; }
+.deal-card .card-header h1.title-medium { font-size: 42px; letter-spacing: -1px; }
+.deal-card .card-header h1.title-long { font-size: 34px; letter-spacing: -.5px; }
+.deal-card .card-meta { font-size: 20px; margin: 0; color: #45616A; }
+.deal-card .card-art { width: 370px; height: 248px; top: 0; right: 0; }
+.deal-card .hero-mascots { width: 370px; height: 247px; filter: none; }
+.deal-card .art-sun, .deal-card .art-star, .deal-card .art-dot { display: none; }
+.deal-card .products { gap: 12px; }
+.deal-card .product {
+  background: #FFFFFFF8; border: none; border-radius: 28px; box-shadow: none;
+  padding: 16px 20px 16px 78px; gap: 18px;
+  grid-template-columns: 120px minmax(0,1fr) 266px;
+}
+.deal-card .product::before, .deal-card .product::after { display: none; }
+.deal-card .product-number {
+  position: absolute; top: 14px; left: 18px; width: 46px; min-width: 46px; height: 46px;
+  margin: 0; padding: 0; border: none; border-radius: 50%; transform: none;
+  font-size: 27px; background: var(--accent); color: #fff; letter-spacing: -.6px;
+}
+.deal-card .product-image-frame { width: 120px; height: 120px; border: none; background: #fff; border-radius: 15px; }
+.deal-card .product-name { font-size: 30px; font-weight: 800; line-height: 1.24; letter-spacing: -.7px; }
+.deal-card .price-line { color: #F43132; flex-wrap: wrap; gap: 2px 6px; }
+.deal-card .product-price { font-size: 44px; line-height: 1.13; letter-spacing: -1.9px; }
+.deal-card .product-condition { font-size: 18px; color: #B74031; background: #FFF1ED; border-radius: 4px; padding: 2px 4px; }
+.deal-card .product-unit { display: table; margin: 7px 0 0 auto; padding: 6px 17px; border-radius: 30px; background: #FFF0CC; color: #223845; font-size: 22px; font-weight: 850; }
+.deal-card .product-checked { font-size: 16px; color: #72818A; }
+.deal-card .products[data-count='3'] .product { grid-template-columns: 172px minmax(0,1fr) 266px; padding: 24px 20px 24px 78px; gap: 18px; }
+.deal-card .products[data-count='3'] .product-image-frame { width: 172px; height: 172px; }
+.deal-card .products[data-count='4'] .product { grid-template-columns: 138px minmax(0,1fr) 266px; }
+.deal-card .products[data-count='4'] .product-image-frame { width: 138px; height: 138px; }
+.deal-card .products .product.wide-offer { grid-template-columns: 110px minmax(0,1fr) 470px; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
+.deal-card .products .wide-offer .product-image-frame { width: 110px; height: 110px; }
+.deal-card .wide-offer .product-price { font-size: 40px; }
+.deal-card .wide-offer .price-line { flex-wrap: nowrap; }
+.deal-card .wide-offer .product-condition { font-size: 16px; }
+.deal-card .wide-offer .product-unit { font-size: 20px; line-height: 1.1; padding: 4px 12px; margin-top: 5px; }
+.deal-card .card-footer { border: none; padding: 0; align-items: center; }
+.deal-card .footer-copy { width: 100%; }
+.deal-card .footer-final { display: flex; align-items: center; gap: 25px; font-size: 23px; }
+.deal-card .footer-address { display: inline-flex; align-items: center; gap: 25px; padding: 17px 24px; border-radius: 27px; background: var(--accent); color: #fff; font-size: 31px; font-weight: 850; }
+.deal-card .footer-address > span { display: grid; place-items: center; background: white; color: var(--accent); border-radius: 50%; width: 34px; height: 34px; line-height: 1; font-size: 26px; }
+.deal-card .footer-love { display: none; }
+.deal-card .posting-note { font-size: 19px; margin-bottom: 4px; }
+.deal-card[data-mall='toss'] .footer-address { padding-top: 12px; padding-bottom: 12px; }

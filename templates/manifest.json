@@ -1,0 +1,71 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1350
+  },
+  "templates": [
+    {
+      "mall": "coupang",
+      "count": 3,
+      "png": "assets/tpl/coupang-3.png",
+      "layout": "assets/tpl/coupang-3.json",
+      "input": "templates/coupang-3.json"
+    },
+    {
+      "mall": "coupang",
+      "count": 4,
+      "png": "assets/tpl/coupang-4.png",
+      "layout": "assets/tpl/coupang-4.json",
+      "input": "templates/coupang-4.json"
+    },
+    {
+      "mall": "coupang",
+      "count": 5,
+      "png": "assets/tpl/coupang-5.png",
+      "layout": "assets/tpl/coupang-5.json",
+      "input": "templates/coupang-5.json"
+    },
+    {
+      "mall": "toss",
+      "count": 3,
+      "png": "assets/tpl/toss-3.png",
+      "layout": "assets/tpl/toss-3.json",
+      "input": "templates/toss-3.json"
+    },
+    {
+      "mall": "toss",
+      "count": 4,
+      "png": "assets/tpl/toss-4.png",
+      "layout": "assets/tpl/toss-4.json",
+      "input": "templates/toss-4.json"
+    },
+    {
+      "mall": "toss",
+      "count": 5,
+      "png": "assets/tpl/toss-5.png",
+      "layout": "assets/tpl/toss-5.json",
+      "input": "templates/toss-5.json"
+    },
+    {
+      "mall": "naver",
+      "count": 3,
+      "png": "assets/tpl/naver-3.png",
+      "layout": "assets/tpl/naver-3.json",
+      "input": "templates/naver-3.json"
+    },
+    {
+      "mall": "naver",
+      "count": 4,
+      "png": "assets/tpl/naver-4.png",
+      "layout": "assets/tpl/naver-4.json",
+      "input": "templates/naver-4.json"
+    },
+    {
+      "mall": "naver",
+      "count": 5,
+      "png": "assets/tpl/naver-5.png",
+      "layout": "assets/tpl/naver-5.json",
+      "input": "templates/naver-5.json"
+    }
+  ]
+}
