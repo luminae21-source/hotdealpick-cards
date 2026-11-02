@@ -45,6 +45,8 @@ jobs:
         run: npm run test:browser
       - name: Render 1080 x 1350 PNG cards
         run: npm run render
+      - name: Prepare Threads and Instagram upload packs
+        run: npm run social
       - name: Build public site
         run: npm run build
       - name: Save PNG files and render report
@@ -52,8 +54,28 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: hotdealpick-cards-${{ github.run_number }}
-          path: rendered/
+          path: |
+            rendered/
+            social/
           if-no-files-found: warn
+          retention-days: ${{ inputs.retention_days || '30' }}
+      - name: Save nine reusable blank templates
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: hotdealpick-9-templates
+          path: |
+            assets/tpl/*-3.png
+            assets/tpl/*-4.png
+            assets/tpl/*-5.png
+            assets/tpl/*-3.json
+            assets/tpl/*-4.json
+            assets/tpl/*-5.json
+            templates/
+            FILL.md
+            SOCIAL_WORKFLOW.md
+            prompts/claude-daily.md
+          if-no-files-found: error
           retention-days: ${{ inputs.retention_days || '30' }}
       - name: Save browser test results
         if: ${{ always() }}
