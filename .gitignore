@@ -9,3 +9,6 @@ playwright-report/
 .render-stage-*/
 .build-stage-*/
 .pipeline-test-*/
+
+social/
+.social-stage-*/
