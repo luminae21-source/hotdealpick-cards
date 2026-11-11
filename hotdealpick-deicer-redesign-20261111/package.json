@@ -1,0 +1,1 @@
+{"name":"hotdealpick-deicer-editorial","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node src/render.mjs","check":"node src/check.mjs"},"dependencies":{"sharp":"0.35.5"}}

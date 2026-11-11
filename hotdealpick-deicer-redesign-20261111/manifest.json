@@ -1,0 +1,110 @@
+{
+  "created": "2026-11-11",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 30,
+      "sha256": "8ffe9de56bd30c1a95cd945262d6e3ac355ada4111551dde41f67851b9f1fc55"
+    },
+    {
+      "path": "CLAUDE_HANDOFF.md",
+      "bytes": 2725,
+      "sha256": "3979ab5f028fcf64550f8c559acc15719a6369996f10f734d665d86cbc105039"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3393,
+      "sha256": "d96e0d2664ff29ddfc59ff92ebef2d5e1659678164a49b7b4cbc499e5d6b2e2d"
+    },
+    {
+      "path": "assets/checklist-duo.png",
+      "bytes": 2475972,
+      "sha256": "337f4403045a593d6b2a1e53e4ee5306872c5779b5e4f4e04c74d4ee6f152958"
+    },
+    {
+      "path": "assets/winter-car-duo.png",
+      "bytes": 2673785,
+      "sha256": "7ef7874128df3626abad7d8fb8b244ce5a9d1beb5a5b663bc5087d6c23b3126d"
+    },
+    {
+      "path": "data/products.json",
+      "bytes": 1402,
+      "sha256": "29b1492fdc73fc9f8e6efac33eab75bce33271039d01646b06ae13ac06222259"
+    },
+    {
+      "path": "docs/captions.md",
+      "bytes": 3429,
+      "sha256": "159d6f6f0a42f7f728abacf6ce5e2092f847da0a16ad15b63399f39b1b67f25c"
+    },
+    {
+      "path": "docs/design-rules.md",
+      "bytes": 2058,
+      "sha256": "1b0b4fa5af728355b988de2dd7105586b517607687e025bb797f0a4332ad1e13"
+    },
+    {
+      "path": "exports/01-cover.png",
+      "bytes": 552558,
+      "sha256": "be00113d6ac1929b5d442dc6ab9b0bfd11051e3545df5b03a525804819567c3c"
+    },
+    {
+      "path": "exports/01-cover.svg",
+      "bytes": 3569358,
+      "sha256": "1ac8d97111b4d818b14e60c4eaeecf351669af426f0742b7c65ed20a0084b5cd"
+    },
+    {
+      "path": "exports/02-unit-price.png",
+      "bytes": 149607,
+      "sha256": "53d8854bd63c77a8a8c87cbdecb6e13385fe72b6ed7013883d3de6ad4d921f6e"
+    },
+    {
+      "path": "exports/02-unit-price.svg",
+      "bytes": 7099,
+      "sha256": "62e4134103773022230106d3428d1dd8eb12e842b89b29b1b46847f38159c841"
+    },
+    {
+      "path": "exports/03-price-list.png",
+      "bytes": 161066,
+      "sha256": "7679bf11a2d7f07df2e6554a342252bb1904f07d5e96f8e6934e32e97493bbfe"
+    },
+    {
+      "path": "exports/03-price-list.svg",
+      "bytes": 7141,
+      "sha256": "552ba884c2d20e0f81aedc98a5f724d45e62ad1fced2f75272582885a961081d"
+    },
+    {
+      "path": "exports/04-shopping-note.png",
+      "bytes": 198192,
+      "sha256": "87f78177c94c2db2e9c2000a7cded7e2c0bdb29d2cf8575170613ee2c4b6b9dd"
+    },
+    {
+      "path": "exports/04-shopping-note.svg",
+      "bytes": 3305894,
+      "sha256": "a3613f989dcfe00315f2d6e11bf48aaa57312cc38bf4fd45448c3d552b59d1c7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1486,
+      "sha256": "1a73811773a6a59a2693bdf5ff6fc50dcadddc9e33a055464e3d50cda0b95aed"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 19478,
+      "sha256": "aee50ab476037ee705830c042b391cafc93b9b7eed4d4f12f67d45c48c372af7"
+    },
+    {
+      "path": "package.json",
+      "bytes": 193,
+      "sha256": "d30194860446aacc2fbff0af77b0cbc464c392c9de7171a4c7b8f8749e9e3d9d"
+    },
+    {
+      "path": "src/check.mjs",
+      "bytes": 1119,
+      "sha256": "56e212937fa9684161bedcffdd2d2218f3c81838509cb538f7acccbf196e2211"
+    },
+    {
+      "path": "src/render.mjs",
+      "bytes": 8746,
+      "sha256": "be38bd861450628b463e882b3f16e2024cb3de8ea3d02763927fca5ac4776dba"
+    }
+  ]
+}

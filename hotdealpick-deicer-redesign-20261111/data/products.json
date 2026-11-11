@@ -1,0 +1,19 @@
+{
+  "title": "성에제거제 6종 가격 비교",
+  "mall": "coupang",
+  "source": "사용자 첨부 시안",
+  "checked": "2026-11-11 18:00",
+  "independently_verified": false,
+  "currency": "KRW",
+  "unit_ml": 100,
+  "rounding": "nearest integer",
+  "scope_note": "첨부된 6종의 표시 가격 비교. 성능 순위나 시장 전체 최저가를 뜻하지 않음.",
+  "items": [
+    {"id":"dongke","name":"동케 성에제거 스프레이","short_name":"동케","price":6640,"volume_ml":420,"count":2,"condition":"","image_url":"","url":""},
+    {"id":"jien","name":"지엔 성에싹","short_name":"지엔 성에싹","price":7870,"volume_ml":420,"count":2,"condition":"와우·쿠폰가","image_url":"","url":""},
+    {"id":"tamsa","name":"탐사 성에제거 스프레이","short_name":"탐사","price":8410,"volume_ml":420,"count":2,"condition":"","image_url":"","url":""},
+    {"id":"bullsone","name":"불스원 레인OK 성에제거","short_name":"불스원 레인OK","price":6800,"volume_ml":400,"count":1,"condition":"","image_url":"","url":""},
+    {"id":"sonax","name":"소낙스 성에제거 스프레이","short_name":"소낙스","price":10660,"volume_ml":500,"count":1,"condition":"와우가","image_url":"","url":""},
+    {"id":"nimin","name":"nimin 성에제거 스프레이","short_name":"nimin","price":10900,"volume_ml":500,"count":1,"condition":"","image_url":"","url":""}
+  ]
+}
