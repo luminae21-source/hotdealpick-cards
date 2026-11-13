@@ -9,7 +9,7 @@ for(const p of catalog){
   const meta=await sharp(path.join(root,'previews',p.name+'.png')).metadata();assert.equal(meta.width,1080);assert.equal(meta.height,1350);
   const s=await readFile(path.join(root,'templates',p.name+'.svg'),'utf8');
   for(const line of malls[p.mall].disclosure)assert.ok(s.includes(line));
-  assert.ok(s.includes('font-size="22"'));assert.ok(s.includes('font-size="32"'));assert.ok(s.includes('font-size="42"'));
+  assert.ok(s.includes('font-size="24"'));assert.ok(s.includes('font-size="36"'));assert.ok(s.includes('font-size="46"'));
   assert.ok(s.includes('디자인 서식'));assert.ok(s.includes('최종가 확인'));
   if(p.mall==='toss')assert.ok(s.includes('게시 시점 가격'));
   const t=defaultTheme(p.mall,p.mode);assert.notEqual(t,themes[t].footer);
