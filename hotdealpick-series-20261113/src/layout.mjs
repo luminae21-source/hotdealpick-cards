@@ -41,7 +41,7 @@ export async function layout({mall,mode,count,items=[],checked='',theme=defaultT
   const hero=await asset(`assets/mascots/${theme}.png`,embedded),foot=await asset(`assets/mascots/${th.footer}.png`,embedded);
   let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"><title>핫딜픽 ${e(series[mode])} · ${m.label} · ${count}개${preview?' · 디자인 서식':''}</title><desc>${preview?'상품과 가격이 입력되지 않은 디자인 미리보기입니다. 게시용 카드가 아닙니다.':e(checked)+' 확인 가격. 구매 전 최종가 확인.'}</desc><style>text{font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.6px}svg{background:${m.paper}}</style>`;
   svg+=rect(0,0,1080,1350,m.paper)+`<ellipse cx="1020" cy="210" rx="220" ry="210" fill="${m.pale}" opacity=".6"/><ellipse cx="40" cy="1350" rx="220" ry="140" fill="${m.pale}" opacity=".75"/>`;
-  svg+=rect(32,22,1016,78,m.pale,24)+text(55,53,m.disclosure[0],22,500,C.navy)+text(55,83,m.disclosure[1],22,500,C.navy);
+  svg+=rect(32,22,1016,78,m.pale,24)+text(55,54,m.disclosure[0],24,500,C.navy)+text(55,85,m.disclosure[1],24,500,C.navy);
   svg+=rect(48,124,49,49,C.red,14)+text(72.5,161,'딜',34,700,'white','middle')+text(111,160,'핫딜픽',32,700);
   svg+=rect(258,127,111,43,'#FFFFFF',21)+text(313.5,157,m.label,24,700,m.ink,'middle');
   svg+=img(hero,673,125,354,302);
@@ -52,7 +52,7 @@ export async function layout({mall,mode,count,items=[],checked='',theme=defaultT
   }
   const underY=mode==='basket'?365:345;
   svg+=`<path d="M51 ${underY} C190 ${underY-11},386 ${underY-9},590 ${underY-2}" fill="none" stroke="${C.yellow}" stroke-width="12" stroke-linecap="round"/>`;
-  svg+=text(48,408,`${preview?'확인 시각 입력':dateLabel(checked)+' 확인 가격'} · ${count}개의 ${mode==='basket'?'픽':'꾸준템'}`,24,500,C.teal);
+  svg+=text(48,408,`${preview?'확인 시각 입력':dateLabel(checked)+' 확인 가격'} · ${count}개의 ${mode==='basket'?'픽':'꾸준템'}`,28,500,C.teal);
   const top=441,gap=13,total=724,row=(total-gap*(count-1))/count;
   for(let i=0;i<count;i++){
     const p=items[i]||{},y=top+i*(row+gap),cy=y+row/2;
@@ -64,21 +64,21 @@ export async function layout({mall,mode,count,items=[],checked='',theme=defaultT
     if(p.img)svg+=img(await asset(p.img,embedded),px,py,photoSize,photoSize);
     else svg+=photoPlaceholder(px,py,photoSize,preview);
     const nx=count===3?279:count===4?256:228,nameMax=760-nx;
-    const names=preview?['상품명을 입력하세요','용량 · 구성 입력']:wrap(p.name,32,nameMax);
-    let ny=cy-((names.length-1)*39)/2-9;
-    names.forEach((s,j)=>{svg+=text(nx,ny+j*39,s,32,j===0?700:400,j===0?C.navy:C.teal)});
-    svg+=text(nx,ny+(names.length-1)*39+32,preview?'상품별 확인 시각':dateLabel(p.checked)+' 확인',18,400,C.muted);
-    const price=preview?'가격 입력':p.price,priceSize=preview?42:44;
+    const names=preview?['상품명을 입력하세요','용량 · 구성 입력']:wrap(p.name,36,nameMax);
+    let ny=cy-((names.length-1)*43)/2-10;
+    names.forEach((s,j)=>{svg+=text(nx,ny+j*43,s,36,j===0?700:400,j===0?C.navy:C.teal)});
+    svg+=text(nx,ny+(names.length-1)*43+35,preview?'상품별 확인 시각':dateLabel(p.checked)+' 확인',21,400,C.muted);
+    const price=preview?'가격 입력':p.price,priceSize=46;
     if(width(price,priceSize)>243)throw Error('가격이 가격 칸을 넘습니다. 100만 원 이상의 상품은 별도 레이아웃이 필요합니다.');
     svg+=text(1012,cy-2,price,priceSize,700,C.red,'end');
-    if(p.cond)svg+=text(1012,cy-43,p.cond,20,700,m.ink,'end');
+    if(p.cond)svg+=text(1012,cy-46,p.cond,23,700,m.ink,'end');
     const unit=preview?'단위 가격 입력':p.unit;
-    if(unit){if(width(unit,22)>242)throw Error('단위 가격을 20자 이내로 줄여 주세요.');svg+=rect(771,cy+13,241,34,'#FFF1C9',17)+text(891.5,cy+38,unit,22,700,C.navy,'middle');}
+    if(unit){if(width(unit,24)>242)throw Error('단위 가격을 20자 이내로 줄여 주세요.');svg+=rect(771,cy+13,241,38,'#FFF1C9',19)+text(891.5,cy+40,unit,24,700,C.navy,'middle');}
   }
-  if(mall==='toss')svg+=text(48,1203,`⚠ ${preview?'M/D HH:MM':dateLabel(checked)} 게시 시점 가격`,22,700,m.ink);
-  else svg+=text(48,1203,preview?'상품 입력 전 · 디자인 서식':'표시 가격은 확인 시점 기준입니다.',22,400,C.teal);
+  if(mall==='toss')svg+=text(48,1203,`⚠ ${preview?'M/D HH:MM':dateLabel(checked)} 게시 시점 가격`,24,700,m.ink);
+  else svg+=text(48,1203,preview?'상품 입력 전 · 디자인 서식':'표시 가격은 확인 시점 기준입니다.',24,400,C.teal);
   svg+=rect(48,1226,315,63,m.accent,25)+text(71,1268,'hotdealpick.kr',30,700,'white')+`<circle cx="330" cy="1257" r="17" fill="white"/><path d="M321 1257h17m-6-6 6 6-6 6" fill="none" stroke="${m.accent}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
-  svg+=text(391,1268,'결제 전 최종가 확인',27,700,C.navy)+img(foot,835,1192,190,144);
-  svg+=text(48,1320,preview?'미리보기용 빈 서식 · 실제 상품과 가격 확인 후 사용':'가격·재고·배송비는 구매 시 달라질 수 있습니다.',19,400,C.muted);
+  svg+=text(391,1268,'결제 전 최종가 확인',29,700,C.navy)+img(foot,835,1192,190,144);
+  svg+=text(48,1320,preview?'미리보기용 빈 서식 · 실제 상품과 가격 확인 후 사용':'가격·재고·배송비는 구매 시 달라질 수 있습니다.',21,400,C.muted);
   return svg+'</svg>';
 }
