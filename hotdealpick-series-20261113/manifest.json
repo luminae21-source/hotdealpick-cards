@@ -1,0 +1,387 @@
+[
+  {
+    "path": "CLAUDE_HANDOFF.md",
+    "bytes": 3139,
+    "sha256": "c27d09ec44a9c0edaf0ab95bc23680f0b36a6a49429c92032eabcb74205c4cb1"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5179,
+    "sha256": "f40a26a89172a93b95d34d70f3acbd939f988c8027ac790ae2c99283df0b2e48"
+  },
+  {
+    "path": "assets/mascots/home.png",
+    "bytes": 1937784,
+    "sha256": "80c8e73d23cad739c3a420e963833089b34e9ce36307792767e0a27b227f701c"
+  },
+  {
+    "path": "assets/mascots/market.png",
+    "bytes": 1623402,
+    "sha256": "52b252d11e4e167e52ac5f9c56549802bf4a97dfd8f0c7b7b89bda99fe8f67b2"
+  },
+  {
+    "path": "assets/mascots/pantry.png",
+    "bytes": 1797423,
+    "sha256": "8c159ce816599a2ba1c10dd6812a66e7cd18d75bd28e5e7559e1af6deab8cfc5"
+  },
+  {
+    "path": "assets/mascots/season.png",
+    "bytes": 1803780,
+    "sha256": "d8917b99294dfb16f54737caefb81cc778919de23f9cd96290491164dfd5a6dc"
+  },
+  {
+    "path": "catalog.json",
+    "bytes": 2169,
+    "sha256": "03d51dc32492f7e2af93a8c4d1a304b63ab8e1bae32cb80081e02f81dd9b83d8"
+  },
+  {
+    "path": "data/basket-coupang-3.json",
+    "bytes": 515,
+    "sha256": "993ee5b299d27290d44228f8b72e510cb7099a22c373159ef3387e2d0c108f47"
+  },
+  {
+    "path": "data/basket-coupang-4.json",
+    "bytes": 655,
+    "sha256": "3199b1042a1a7380a420f5b14ab6e1a019242580b47b7f3b82876a6e7c963506"
+  },
+  {
+    "path": "data/basket-coupang-5.json",
+    "bytes": 795,
+    "sha256": "ffcd17b1688459584612ec99ebb4c112a453c10f3536687efae3ed3e5b1f2a3c"
+  },
+  {
+    "path": "data/basket-naver-3.json",
+    "bytes": 513,
+    "sha256": "28117a83abf9a3e97b45a23d114d7da222afa2b03be426fc1b8fe5ecb7482c13"
+  },
+  {
+    "path": "data/basket-naver-4.json",
+    "bytes": 653,
+    "sha256": "dc5cf2f819bdd6efded4713434dfcad3d4cecc209b057b376dfb0009a5c8df25"
+  },
+  {
+    "path": "data/basket-naver-5.json",
+    "bytes": 793,
+    "sha256": "186700301378e613c501d26229be1bbf680bfd56a52a59c2c16b8a8ac3ff80db"
+  },
+  {
+    "path": "data/basket-toss-3.json",
+    "bytes": 512,
+    "sha256": "bdb889a8f7881d070401d22e595efec4334e789e662457d14706235754170fdc"
+  },
+  {
+    "path": "data/basket-toss-4.json",
+    "bytes": 652,
+    "sha256": "90e9873311f1cd6c23aebc5f869e35c4d014d9ee95d8c94b19ecd9ad5ed5cb9b"
+  },
+  {
+    "path": "data/basket-toss-5.json",
+    "bytes": 792,
+    "sha256": "437b37b85f8d3a84bc65880bb6f80c9869cd2a1e924288115a702c8641ba5818"
+  },
+  {
+    "path": "data/steady-coupang-3.json",
+    "bytes": 512,
+    "sha256": "ad984fe7ca73a4ab753d9dbd71a54bfa8d03f85fd213b41a6d24855592dd1692"
+  },
+  {
+    "path": "data/steady-coupang-4.json",
+    "bytes": 652,
+    "sha256": "cbd839f4c60e534ac6d209d29d61d5b670f3f696513461ca4e28b829a17c0bcd"
+  },
+  {
+    "path": "data/steady-coupang-5.json",
+    "bytes": 792,
+    "sha256": "50d2395dbadc14619feb0cb5f81158aa015182030fc9ede441ada58b2d754210"
+  },
+  {
+    "path": "data/steady-naver-3.json",
+    "bytes": 510,
+    "sha256": "4a081142e7fb1399e97d5df4057c5701a438fb8a76bd55c1c8fb041e46bb5b14"
+  },
+  {
+    "path": "data/steady-naver-4.json",
+    "bytes": 650,
+    "sha256": "22f203bac17d5484aaf5caaa5a50ae3670e3bbf9c1228197b4c031ec0151c873"
+  },
+  {
+    "path": "data/steady-naver-5.json",
+    "bytes": 790,
+    "sha256": "6b9d4d629f67519fe6c8cecd6d9160a24a8d45ce9fc9751955ec64a449d22683"
+  },
+  {
+    "path": "data/steady-toss-3.json",
+    "bytes": 509,
+    "sha256": "a85abdf331298bff0fd0792ae65fdbfe99da5f0421f11f0d73d92fb2796f149f"
+  },
+  {
+    "path": "data/steady-toss-4.json",
+    "bytes": 649,
+    "sha256": "e36885118e81ca47094ff40642d851ed55cae8d8bf17a9b3628ac23536bb583d"
+  },
+  {
+    "path": "data/steady-toss-5.json",
+    "bytes": 789,
+    "sha256": "8ec5ddd46d6579d9b07c115a46789ce5b19c8151e58d394026d4b9c3e45f07c9"
+  },
+  {
+    "path": "docs/VERIFICATION.md",
+    "bytes": 793,
+    "sha256": "4059f0c0dba162f2393ab697db8bfbadb87ae17d145aab3495c9f19fce34adf4"
+  },
+  {
+    "path": "docs/caption-templates.md",
+    "bytes": 1849,
+    "sha256": "fbc6a8e90725a32153834508e63a89f260d49fe44f70e94476945989d9b2a026"
+  },
+  {
+    "path": "docs/design-rules.md",
+    "bytes": 1118,
+    "sha256": "b5276943b1533b60fed010b8025fa1e4b5a805b54fd3cb225f756016c17554aa"
+  },
+  {
+    "path": "docs/mascot-prompts.json",
+    "bytes": 4912,
+    "sha256": "71d815516afea146b964d893d260bc053ed59b6f52ac834c9c2a5c6344e0af27"
+  },
+  {
+    "path": "docs/series-plan.md",
+    "bytes": 1427,
+    "sha256": "a6bcbc8dee0062ae7c834deaf463a98e414ac8dd11a9b7a0e816985b4370dc4c"
+  },
+  {
+    "path": "index.html",
+    "bytes": 6215,
+    "sha256": "ed4b6087da582fb601169b1eaf0d13c31b0f805ae9c8afe10b04116bbcc31957"
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 19509,
+    "sha256": "416d1246b2bd8ed992c002f4fcded5fc70864878a1ed2b7e2101d62098a5c6a0"
+  },
+  {
+    "path": "package.json",
+    "bytes": 358,
+    "sha256": "e354b4d58493450b388f7c6f8a7ede51190f97d750b5896d32a0881631505934"
+  },
+  {
+    "path": "previews/basket-coupang-3.png",
+    "bytes": 87364,
+    "sha256": "b22ba8168c56c406fc85f9222b657ab7b1af1b6d0c289702835aaf77dd5d1d81"
+  },
+  {
+    "path": "previews/basket-coupang-4.png",
+    "bytes": 94583,
+    "sha256": "4228b51231b245f55c402c9b478abe922e429700d228f13c5ffb2bb51e4ddf63"
+  },
+  {
+    "path": "previews/basket-coupang-5.png",
+    "bytes": 102029,
+    "sha256": "b088ba9982f28f7ac321f42cc74e338086f44bcce6377a0c2f2fe483aa93bff6"
+  },
+  {
+    "path": "previews/basket-naver-3.png",
+    "bytes": 87041,
+    "sha256": "f491febbe92e4ba48fdc132428a5a9868cb517af4e3e2fff0196c212afd4036d"
+  },
+  {
+    "path": "previews/basket-naver-4.png",
+    "bytes": 94496,
+    "sha256": "b2106fb5b8d240e30ab646e2b5e42a654c1db99a135ede816613555bc856f453"
+  },
+  {
+    "path": "previews/basket-naver-5.png",
+    "bytes": 101520,
+    "sha256": "b63e4df4b5e0c516ab9354a2e9643df196a106ebbd260c4e2434c6499666ef26"
+  },
+  {
+    "path": "previews/basket-toss-3.png",
+    "bytes": 87639,
+    "sha256": "6bef387152ba2e3c78ca2a62a8e3ab5c73b8be10af06ac618568a97aa0402a12"
+  },
+  {
+    "path": "previews/basket-toss-4.png",
+    "bytes": 94341,
+    "sha256": "cfb270460f0982df4911441f4168cdb7d0784cbd66d39ff193acc4f27dd70b6d"
+  },
+  {
+    "path": "previews/basket-toss-5.png",
+    "bytes": 102430,
+    "sha256": "72839962026cf4ad45942e236fae4afb00971027f0249eede7527fde6d1be1c4"
+  },
+  {
+    "path": "previews/steady-coupang-3.png",
+    "bytes": 89866,
+    "sha256": "71540d809f140c521b7dd2bff330ca47cd8e830556d683045c39cd586521d80e"
+  },
+  {
+    "path": "previews/steady-coupang-4.png",
+    "bytes": 97951,
+    "sha256": "017032e96699e60acb79c791718ede5291bce6d0d78d136ce2dccbd0a284fd4b"
+  },
+  {
+    "path": "previews/steady-coupang-5.png",
+    "bytes": 104874,
+    "sha256": "1efa1c63d25bd1e52b997dbcbdc849f134224df37a7c05704f8f9dafd1afc356"
+  },
+  {
+    "path": "previews/steady-naver-3.png",
+    "bytes": 92810,
+    "sha256": "d090d942dd807102554b35e31c99f22083c908633181180f5f9d9373421f0073"
+  },
+  {
+    "path": "previews/steady-naver-4.png",
+    "bytes": 100724,
+    "sha256": "2193984a2c703168a612f282087ffa8a8eed5147182de5bb81bbd5a885721a43"
+  },
+  {
+    "path": "previews/steady-naver-5.png",
+    "bytes": 108196,
+    "sha256": "14865548b01b980dd07f989fbaeeed3c17028c71b5e652f4e8a39d3caa5fcb70"
+  },
+  {
+    "path": "previews/steady-toss-3.png",
+    "bytes": 92916,
+    "sha256": "95fd2430dd6ac5b64155683d82c7dbf42ee88941e3539697cd4647ccbcf459a7"
+  },
+  {
+    "path": "previews/steady-toss-4.png",
+    "bytes": 100504,
+    "sha256": "0ee7873a6175f87593b4de2f301a6298e024347b74175c66183de5ef7e795ece"
+  },
+  {
+    "path": "previews/steady-toss-5.png",
+    "bytes": 107606,
+    "sha256": "77ebf08a740f4852795ab920121deccde4668c61d4bf0e230a2fcec1a123fd4a"
+  },
+  {
+    "path": "src/build-templates.mjs",
+    "bytes": 1236,
+    "sha256": "c7dcdee7eee6ac3c299cdddb22b67c90f294066016e99cdb39e4013b6dfdd7ae"
+  },
+  {
+    "path": "src/check-exports.mjs",
+    "bytes": 1471,
+    "sha256": "7c02d9988a56d021bd057f61f3be02c20ddcbd33b1b2a1a2d59864ee30a1c442"
+  },
+  {
+    "path": "src/config.mjs",
+    "bytes": 1627,
+    "sha256": "034e6263f3393aa179d5e081f1b4f4b263f917df346ddd54bd28a6e9b87399c3"
+  },
+  {
+    "path": "src/layout.mjs",
+    "bytes": 7569,
+    "sha256": "45e8074ea8a116783c385d822cf97df2f9e1523672def8e8c4289bf2fa6146d2"
+  },
+  {
+    "path": "src/render.mjs",
+    "bytes": 2269,
+    "sha256": "b803a900cb7a6a82061b658d9d3523fa8babb300127d838ff4d81048aca198f5"
+  },
+  {
+    "path": "src/unit.mjs",
+    "bytes": 174,
+    "sha256": "e183c6cd462708cebe7807814586a0a86227c3fbcc65d4323f0536225cb026b6"
+  },
+  {
+    "path": "src/validate.mjs",
+    "bytes": 3376,
+    "sha256": "b8b82db75d427ce1c0e2d9d3367d13e14f6fd1b84d46c1f0771b1ca80ab79102"
+  },
+  {
+    "path": "templates/basket-coupang-3.svg",
+    "bytes": 7776,
+    "sha256": "0a85d76238f91abc6f06a0007055c62e72534be210b8ecd24841046028cf390d"
+  },
+  {
+    "path": "templates/basket-coupang-4.svg",
+    "bytes": 8946,
+    "sha256": "ca7785eb35065a8b3885456ea30b05b645f143a99ba41beba16c2a520b5b9200"
+  },
+  {
+    "path": "templates/basket-coupang-5.svg",
+    "bytes": 10441,
+    "sha256": "137fc4462d5049aee62293262fd6a75b4f46882a6c80f28ea3f02ad75e6c4b76"
+  },
+  {
+    "path": "templates/basket-naver-3.svg",
+    "bytes": 7780,
+    "sha256": "0a8d7dca8663942db96f4b116940dec9cbb8bdab79c5f655282cf2d7764c6e1f"
+  },
+  {
+    "path": "templates/basket-naver-4.svg",
+    "bytes": 8950,
+    "sha256": "3c64521e86e361a3b5d0dc9035aecccdb3435f09d10b4763b40497932e8807ac"
+  },
+  {
+    "path": "templates/basket-naver-5.svg",
+    "bytes": 10445,
+    "sha256": "31c551ba16e32b6bcf556bad14f96e295b607e3bff428b55a2e5ff21b4ebf411"
+  },
+  {
+    "path": "templates/basket-toss-3.svg",
+    "bytes": 7799,
+    "sha256": "d1ce7e0d1f0d9c9d420907718e1b4a5095fd71b264e8770a4a019b31b174cd21"
+  },
+  {
+    "path": "templates/basket-toss-4.svg",
+    "bytes": 8969,
+    "sha256": "f65653963b62366b419843d10652d64f731b0dff56b09e04e63e0ed26c1eedb8"
+  },
+  {
+    "path": "templates/basket-toss-5.svg",
+    "bytes": 10464,
+    "sha256": "d895da7a4f8b92cd90c6483cb52e253f2c8641706b881ef9b9b3fee72a15c6c4"
+  },
+  {
+    "path": "templates/steady-coupang-3.svg",
+    "bytes": 7921,
+    "sha256": "44a4b4173e1f9de15d1523405cc1b6eb01766dcff2eb09f16dc6b45a648603d4"
+  },
+  {
+    "path": "templates/steady-coupang-4.svg",
+    "bytes": 9091,
+    "sha256": "eb2e9198fb5613eeb7a3347f8892a241060b01087771ea65bed1fd9c2772c290"
+  },
+  {
+    "path": "templates/steady-coupang-5.svg",
+    "bytes": 10586,
+    "sha256": "1ca22caa565b0dc9e33c6f5172dd233237e4a807ab1dd4448ff384aae922c13a"
+  },
+  {
+    "path": "templates/steady-naver-3.svg",
+    "bytes": 7922,
+    "sha256": "e1eef5744c804f36f13a465bd68a06cbc7a4b6cc94df8d265c4a7064bcb40e51"
+  },
+  {
+    "path": "templates/steady-naver-4.svg",
+    "bytes": 9092,
+    "sha256": "3c41e23524e098cfb26360d25e79bb0fa64a59ab70ae05b991c0c28c4f2be7c6"
+  },
+  {
+    "path": "templates/steady-naver-5.svg",
+    "bytes": 10587,
+    "sha256": "9c5df7ca4dee954598c6b5a815a7876c26bb6b19689521854a34e02fce4baba9"
+  },
+  {
+    "path": "templates/steady-toss-3.svg",
+    "bytes": 7945,
+    "sha256": "cc38bc574b8bdb97e366265cef482c74467006cff0195d8ff8cf9d9ddd60766c"
+  },
+  {
+    "path": "templates/steady-toss-4.svg",
+    "bytes": 9115,
+    "sha256": "0ac0d3131f98eedc39a1dbe753798feec0ff216e7cff437c9cdfefccd9aee8d9"
+  },
+  {
+    "path": "templates/steady-toss-5.svg",
+    "bytes": 10610,
+    "sha256": "7531a16a46420a5cea841a414e1e9b3a2d51614f5da5fa56c715cc21c7fb6f49"
+  },
+  {
+    "path": "tests/validation.test.mjs",
+    "bytes": 2177,
+    "sha256": "53e5ea4c24433919a3e49235cefa7f4c1529c9aa6b47124b242bb82477d87e10"
+  }
+]

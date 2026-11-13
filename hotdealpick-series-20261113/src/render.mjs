@@ -1,0 +1,25 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import path from 'node:path';
+import {layout,sharp,root} from './layout.mjs';
+import {validate} from './validate.mjs';
+import {defaultTheme,themes,malls} from './config.mjs';
+const args=process.argv.slice(2),flags={};
+for(let i=0;i<args.length;i+=2){if(!args[i]?.startsWith('--')||!args[i+1])throw Error('옵션은 --data data/file.json 형식입니다.');flags[args[i].slice(2)]=args[i+1];}
+if(Object.keys(flags).some(k=>!['data','theme','episode','topic','out'].includes(k)))throw Error('알 수 없는 옵션입니다.');
+if(!flags.data)throw Error('npm run render -- --data data/파일.json');
+const data=JSON.parse(await readFile(path.resolve(root,flags.data),'utf8'));
+const checked=validate(data),mode=data.title==='꾸준템 시리즈'?'steady':'basket';
+const theme=flags.theme||defaultTheme(data.mall,mode);
+if(!themes[theme])throw Error('테마는 market / pantry / home / season 입니다.');
+const out=path.resolve(root,flags.out||'output');await mkdir(out,{recursive:true});
+const slug=path.basename(flags.data,'.json');
+const opt={mall:data.mall,mode,count:checked.items.length,items:checked.items,checked:data.checked,theme,episode:flags.episode||'01',topic:flags.topic||''};
+const svg=await layout(opt);
+await writeFile(path.join(out,slug+'.svg'),svg);
+await sharp(Buffer.from(svg)).png({compressionLevel:9}).toFile(path.join(out,slug+'.png'));
+const title=data.title+(mode==='steady'?` · ${flags.episode||'01'}회${flags.topic?' · '+flags.topic:''}`:'');
+const productLines=checked.items.map((p,i)=>`${String(i+1).padStart(2,'0')}. ${p.name}\n${p.price}${p.cond?' ('+p.cond+')':''}${p.unit?' · '+p.unit:''}\n${p.checked} 확인\n${p.url}`).join('\n\n');
+const caption=malls[data.mall].disclosure.join(' ')+'\n\n'+title+'\n'+data.checked+' 기준\n\n'+productLines+'\n\nhotdealpick.kr · 결제 전 최종가 확인\n';
+await writeFile(path.join(out,slug+'-caption.txt'),caption);
+await writeFile(path.join(out,slug+'-alt.txt'),`${malls[data.mall].label} ${title}. ${checked.items.map(p=>p.name+' '+p.price).join(', ')}. ${data.checked} 기준.\n`);
+console.log(JSON.stringify({output:out,name:slug,mall:data.mall,shown:checked.items.length,excluded:checked.excluded,theme,posted:false}));

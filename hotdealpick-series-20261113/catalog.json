@@ -1,0 +1,128 @@
+[
+  {
+    "name": "basket-coupang-3",
+    "mode": "basket",
+    "mall": "coupang",
+    "count": 3,
+    "theme": "market"
+  },
+  {
+    "name": "basket-coupang-4",
+    "mode": "basket",
+    "mall": "coupang",
+    "count": 4,
+    "theme": "market"
+  },
+  {
+    "name": "basket-coupang-5",
+    "mode": "basket",
+    "mall": "coupang",
+    "count": 5,
+    "theme": "market"
+  },
+  {
+    "name": "basket-naver-3",
+    "mode": "basket",
+    "mall": "naver",
+    "count": 3,
+    "theme": "market"
+  },
+  {
+    "name": "basket-naver-4",
+    "mode": "basket",
+    "mall": "naver",
+    "count": 4,
+    "theme": "market"
+  },
+  {
+    "name": "basket-naver-5",
+    "mode": "basket",
+    "mall": "naver",
+    "count": 5,
+    "theme": "market"
+  },
+  {
+    "name": "basket-toss-3",
+    "mode": "basket",
+    "mall": "toss",
+    "count": 3,
+    "theme": "market"
+  },
+  {
+    "name": "basket-toss-4",
+    "mode": "basket",
+    "mall": "toss",
+    "count": 4,
+    "theme": "market"
+  },
+  {
+    "name": "basket-toss-5",
+    "mode": "basket",
+    "mall": "toss",
+    "count": 5,
+    "theme": "market"
+  },
+  {
+    "name": "steady-coupang-3",
+    "mode": "steady",
+    "mall": "coupang",
+    "count": 3,
+    "theme": "pantry"
+  },
+  {
+    "name": "steady-coupang-4",
+    "mode": "steady",
+    "mall": "coupang",
+    "count": 4,
+    "theme": "pantry"
+  },
+  {
+    "name": "steady-coupang-5",
+    "mode": "steady",
+    "mall": "coupang",
+    "count": 5,
+    "theme": "pantry"
+  },
+  {
+    "name": "steady-naver-3",
+    "mode": "steady",
+    "mall": "naver",
+    "count": 3,
+    "theme": "home"
+  },
+  {
+    "name": "steady-naver-4",
+    "mode": "steady",
+    "mall": "naver",
+    "count": 4,
+    "theme": "home"
+  },
+  {
+    "name": "steady-naver-5",
+    "mode": "steady",
+    "mall": "naver",
+    "count": 5,
+    "theme": "home"
+  },
+  {
+    "name": "steady-toss-3",
+    "mode": "steady",
+    "mall": "toss",
+    "count": 3,
+    "theme": "season"
+  },
+  {
+    "name": "steady-toss-4",
+    "mode": "steady",
+    "mall": "toss",
+    "count": 4,
+    "theme": "season"
+  },
+  {
+    "name": "steady-toss-5",
+    "mode": "steady",
+    "mall": "toss",
+    "count": 5,
+    "theme": "season"
+  }
+]

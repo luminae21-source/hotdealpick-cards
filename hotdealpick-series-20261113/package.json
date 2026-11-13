@@ -1,0 +1,14 @@
+{
+  "name": "hotdealpick-series",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "templates": "node src/build-templates.mjs",
+    "render": "node src/render.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node src/check-exports.mjs"
+  },
+  "dependencies": {"sharp": "0.35.5"}
+}
