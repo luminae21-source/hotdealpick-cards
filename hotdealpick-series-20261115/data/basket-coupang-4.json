@@ -1,0 +1,43 @@
+{
+  "mall": "coupang",
+  "title": "오늘의 장바구니",
+  "checked": "",
+  "items": [
+    {
+      "name": "",
+      "price": "",
+      "cond": "",
+      "unit": "",
+      "img": "",
+      "url": "",
+      "checked": ""
+    },
+    {
+      "name": "",
+      "price": "",
+      "cond": "",
+      "unit": "",
+      "img": "",
+      "url": "",
+      "checked": ""
+    },
+    {
+      "name": "",
+      "price": "",
+      "cond": "",
+      "unit": "",
+      "img": "",
+      "url": "",
+      "checked": ""
+    },
+    {
+      "name": "",
+      "price": "",
+      "cond": "",
+      "unit": "",
+      "img": "",
+      "url": "",
+      "checked": ""
+    }
+  ]
+}
