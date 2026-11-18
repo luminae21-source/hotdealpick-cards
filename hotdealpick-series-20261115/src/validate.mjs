@@ -1,4 +1,4 @@
-import {malls,series,supportedCounts} from './config.mjs';
+import {malls,titles,supportedCounts} from './config.mjs';
 const banned=/최저가|미백|다이어트|면역|써\s*봤|써\s*본|재구매\s*인증/;
 export function validDate(s){
   if(typeof s!=='string'||!/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/.test(s))return false;
@@ -13,9 +13,9 @@ export function unitPrice(price,total,per=1){
 export function validate(data){
   if(!data || !malls[data.mall])throw Error('몰은 coupang / naver / toss 중 하나입니다.');
   if(Object.keys(data).some(k=>!['mall','title','checked','items'].includes(k)))throw Error('허용되지 않은 루트 필드입니다.');
-  if(!Object.values(series).includes(data.title))throw Error('제목은 오늘의 장바구니 또는 꾸준템 시리즈입니다.');
+  if(!Object.hasOwn(titles,data.title))throw Error('제목은 '+Object.keys(titles).join(' · ')+' 중 하나입니다.');
   if(!validDate(data.checked))throw Error('실제 게시 기준 시각을 YYYY-MM-DD HH:mm 형식으로 입력하세요.');
-  const mode=data.title==='오늘의 장바구니'?'basket':'steady';
+  const mode=titles[data.title];
   if(!Array.isArray(data.items)||!supportedCounts(mode).includes(data.items.length))throw Error(mode==='basket'?'장바구니 상품 수는 3~7개입니다.':'꾸준템 상품 수는 3~5개입니다.');
   for(const p of data.items){
     if(!p||Object.keys(p).some(k=>!['name','price','cond','unit','img','url','checked'].includes(k)))throw Error('허용되지 않은 상품 필드입니다.');
