@@ -17,6 +17,7 @@ export const themes = {
   gift: {label:'선물 도착', topic:'마음을 전하는 작은 선물', footer:'picnic'}
 };
 export const series = {basket:'오늘의 장바구니', steady:'꾸준템 시리즈'};
+export const titles = {'오늘의 장바구니':'basket','오늘 살 만한 딜':'basket','꾸준템 시리즈':'steady'};
 export function defaultTheme(mall,mode) {
   return mode==='basket' ? 'market' : ({coupang:'pantry',naver:'home',toss:'season'}[mall]);
 }
