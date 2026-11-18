@@ -33,7 +33,7 @@ const dateLabel=s=>s?s.slice(5).replace('-','/'):'';
 function photoPlaceholder(x,y,size,preview){
   return rect(x,y,size,size,'#F3F5F1',20)+`<g transform="translate(${x+size/2-21} ${y+size/2-29})" fill="none" stroke="#B9C6BF" stroke-width="2.5"><rect width="42" height="32" rx="6"/><circle cx="30" cy="10" r="4"/><path d="m5 26 10-10 9 10 6-7 7 7"/></g>`+text(x+size/2,y+size/2+32,preview?'상품 사진':'사진 미제공',18,400,C.muted,'middle');
 }
-export async function layout({mall,mode,count,items=[],checked='',theme=defaultTheme(mall,mode),episode='01',topic='',preview=false,embedded=true}){
+export async function layout({mall,mode,count,items=[],checked='',theme=defaultTheme(mall,mode),episode='01',topic='',title='',preview=false,embedded=true}){
   if(!malls[mall]||!series[mode]||!themes[theme]||!supportedCounts(mode).includes(count))throw Error('잘못된 서식 옵션입니다.');
   if(!/^\d{2,3}$/.test(episode))throw Error('시리즈 회차는 01처럼 2~3자리 숫자입니다.');
   if(topic.length>22)throw Error('회차 주제는 22자 이내로 줄여 주세요.');
@@ -46,7 +46,8 @@ export async function layout({mall,mode,count,items=[],checked='',theme=defaultT
   svg+=rect(258,127,111,43,'#FFFFFF',21)+text(313.5,157,m.label,24,700,m.ink,'middle');
   svg+=compact?img(hero,710,113,305,224):img(hero,673,125,354,302);
   if(mode==='basket'){
-    svg+=text(48,compact?215:249,'오늘의',compact?39:48,700,C.navy)+text(43,compact?287:345,'장바구니',compact?76:88,700,m.ink);
+    const [t1,t2]=title==='오늘 살 만한 딜'?['오늘','살 만한 딜']:['오늘의','장바구니'];
+    svg+=text(48,compact?215:249,t1,compact?39:48,700,C.navy)+text(43,compact?287:345,t2,compact?76:88,700,m.ink);
   }else{
     svg+=text(48,231,`VOL. ${episode}  ·  ${topic||th.topic}`,23,500,m.ink)+text(44,322,'꾸준템',92,700,C.navy)+text(338,321,'시리즈',64,700,m.ink);
   }
