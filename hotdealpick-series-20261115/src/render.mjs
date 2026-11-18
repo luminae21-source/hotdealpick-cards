@@ -13,7 +13,7 @@ const theme=flags.theme||defaultTheme(data.mall,mode);
 if(!themes[theme])throw Error('테마는 '+Object.keys(themes).join(' / ')+' 입니다.');
 const out=path.resolve(root,flags.out||'output');await mkdir(out,{recursive:true});
 const slug=path.basename(flags.data,'.json');
-const opt={mall:data.mall,mode,count:checked.items.length,items:checked.items,checked:data.checked,theme,episode:flags.episode||'01',topic:flags.topic||''};
+const opt={mall:data.mall,mode,count:checked.items.length,items:checked.items,checked:data.checked,theme,episode:flags.episode||'01',topic:flags.topic||'',title:data.title};
 const svg=await layout(opt);
 await writeFile(path.join(out,slug+'.svg'),svg);
 await sharp(Buffer.from(svg)).png({compressionLevel:9}).toFile(path.join(out,slug+'.png'));
