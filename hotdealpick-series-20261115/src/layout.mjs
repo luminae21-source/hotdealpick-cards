@@ -53,7 +53,7 @@ export async function layout({mall,mode,count,items=[],checked='',theme=defaultT
   }
   const underY=compact?304:mode==='basket'?365:345;
   svg+=`<path d="M51 ${underY} C190 ${underY-11},386 ${underY-9},590 ${underY-2}" fill="none" stroke="${C.yellow}" stroke-width="12" stroke-linecap="round"/>`;
-  svg+=text(48,compact?334:408,`${preview?'확인 시각 입력':dateLabel(checked)+' 확인 가격'} · ${count}개의 ${mode==='basket'?'픽':'꾸준템'}`,compact?24:28,500,C.teal);
+  svg+=text(48,compact?334:408,`${preview?'확인 시각 입력':title==='오늘 살 만한 딜'?'가격 확인 시각은 줄마다':dateLabel(checked)+' 확인 가격'} · ${count}개의 ${mode==='basket'?'픽':'꾸준템'}`,compact?24:28,500,C.teal);
   const top=compact?350:441,gap=compact?10:13,total=compact?815:724,row=(total-gap*(count-1))/count;
   for(let i=0;i<count;i++){
     const p=items[i]||{},y=top+i*(row+gap),cy=y+row/2;
